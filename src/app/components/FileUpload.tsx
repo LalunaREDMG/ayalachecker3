@@ -302,110 +302,128 @@ export default function FileUpload() {
 
   const ResultTable = ({ result }: { result: ComparisonResult }) => (
     <table className="w-full">
-      <thead className="bg-gray-50 dark:bg-gray-700">
+      <thead className="bg-gray-50">
         <tr>
-          <th className="px-4 py-2 text-left text-sm font-medium text-gray-500 dark:text-gray-200">
+          <th className="px-6 py-3 text-left text-sm font-semibold text-gray-600">
             Description
           </th>
-          <th className="px-4 py-2 text-right text-sm font-medium text-gray-500 dark:text-gray-200">
+          <th className="px-6 py-3 text-right text-sm font-semibold text-gray-600">
             Value
           </th>
-          <th className="px-4 py-2 text-center text-sm font-medium text-gray-500 dark:text-gray-200">
+          <th className="px-6 py-3 text-center text-sm font-semibold text-gray-600">
             Result
           </th>
         </tr>
       </thead>
-      <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
-        <tr>
-          <td className="px-4 py-2">Net Computation</td>
-          <td className="px-4 py-2 text-right">{result.netComputation}</td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+      <tbody className="divide-y divide-gray-200">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">Net Computation</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
+            {result.netComputation}
+          </td>
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800">
               Equal
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">TRANS COUNT</td>
-          <td className="px-4 py-2 text-right">{result.transCount}</td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">TRANS COUNT</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
+            {result.transCount}
+          </td>
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800">
               Match
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">RAW GROSS</td>
-          <td className="px-4 py-2 text-right">{result.rawGross.toFixed(2)}</td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">RAW GROSS</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
+            {result.rawGross.toFixed(2)}
+          </td>
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
               Computed
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">DLYSALE</td>
-          <td className="px-4 py-2 text-right">{result.dlySale.toFixed(2)}</td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">DLYSALE</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
+            {result.dlySale.toFixed(2)}
+          </td>
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
               Read-Only
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">SERVCHARGE</td>
-          <td className="px-4 py-2 text-right">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">SERVCHARGE</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
             {result.servCharge.toFixed(2)}
           </td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
               Read-Only
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">VAT</td>
-          <td className="px-4 py-2 text-right">{result.vat.toFixed(2)}</td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">VAT</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
+            {result.vat.toFixed(2)}
+          </td>
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
               Read-Only
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">NON-VAT</td>
-          <td className="px-4 py-2 text-right">{result.nonVat.toFixed(2)}</td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">NON-VAT</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
+            {result.nonVat.toFixed(2)}
+          </td>
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
               Read-Only
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">TOTDISC</td>
-          <td className="px-4 py-2 text-right">{result.totDisc.toFixed(2)}</td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">TOTDISC</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
+            {result.totDisc.toFixed(2)}
+          </td>
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
               Read-Only
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">TOTREF + TOTCAN</td>
-          <td className="px-4 py-2 text-right">{result.totRef.toFixed(2)}</td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">TOTREF + TOTCAN</td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
+            {result.totRef.toFixed(2)}
+          </td>
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
               Read-Only
             </span>
           </td>
         </tr>
-        <tr>
-          <td className="px-4 py-2">DLYSALE + VAT + SERVCHARGE</td>
-          <td className="px-4 py-2 text-right">
+        <tr className="hover:bg-gray-50">
+          <td className="px-6 py-4 text-sm text-gray-700">
+            DLYSALE + VAT + SERVCHARGE
+          </td>
+          <td className="px-6 py-4 text-sm text-right text-gray-700">
             {result.dlySaleVatServCharge.toFixed(2)}
           </td>
-          <td className="px-4 py-2 text-center">
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+          <td className="px-6 py-4 text-center">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
               Read-Only
             </span>
           </td>
@@ -415,30 +433,44 @@ export default function FileUpload() {
   );
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6 space-y-6">
-      <div className="flex justify-between mb-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-        <div className="text-sm">
-          <p>
-            Header Files: <span className="font-bold">{counts.header}</span>
+    <div className="w-full max-w-4xl mx-auto p-6 space-y-6 bg-white">
+      <div className="flex justify-between mb-4 p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
+        <div className="text-sm text-gray-600">
+          <p className="mb-1">
+            Header Files:{" "}
+            <span className="font-semibold text-gray-900">{counts.header}</span>
           </p>
           <p>
-            Details Files: <span className="font-bold">{counts.details}</span>
+            Details Files:{" "}
+            <span className="font-semibold text-gray-900">
+              {counts.details}
+            </span>
           </p>
         </div>
         <div className="text-sm text-gray-500">
-          <p>Header format: number.txt</p>
-          <p>Details format: numberH.txt</p>
+          <p className="mb-1">
+            Header format:{" "}
+            <span className="font-mono bg-gray-100 px-2 py-0.5 rounded">
+              number.txt
+            </span>
+          </p>
+          <p>
+            Details format:{" "}
+            <span className="font-mono bg-gray-100 px-2 py-0.5 rounded">
+              numberH.txt
+            </span>
+          </p>
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center w-full">
         <label
           htmlFor="file-upload"
-          className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 border-gray-600 dark:border-gray-500"
+          className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 border-gray-300 transition-colors duration-200"
         >
           <div className="flex flex-col items-center justify-center pt-5 pb-6">
             <svg
-              className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+              className="w-10 h-10 mb-4 text-blue-500"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -452,11 +484,13 @@ export default function FileUpload() {
                 d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
               />
             </svg>
-            <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-              <span className="font-semibold">Click to upload</span> or drag and
-              drop
+            <p className="mb-2 text-sm text-gray-600">
+              <span className="font-semibold text-blue-600">
+                Click to upload
+              </span>{" "}
+              or drag and drop
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
+            <p className="text-xs text-gray-500">
               Accepts .txt files (number.txt or numberH.txt)
             </p>
           </div>
@@ -475,20 +509,51 @@ export default function FileUpload() {
         <button
           onClick={processFiles}
           disabled={isProcessing}
-          className="w-full py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:bg-blue-300"
+          className="w-full py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-blue-300 transition-colors duration-200 font-medium shadow-sm"
         >
-          {isProcessing ? "Processing..." : "Process Files"}
+          {isProcessing ? (
+            <span className="flex items-center justify-center">
+              <svg
+                className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Processing...
+            </span>
+          ) : (
+            "Process Files"
+          )}
         </button>
       )}
 
       {groupedResults.length > 0 && (
-        <div className="space-y-8">
+        <div className="space-y-6">
           {groupedResults.map((group, index) => (
-            <div key={group.date} className="border rounded-lg overflow-hidden">
-              <div className="bg-gray-100 dark:bg-gray-800 px-4 py-2 font-medium">
+            <div
+              key={group.date}
+              className="border rounded-lg overflow-hidden shadow-sm"
+            >
+              <div className="bg-gray-50 px-6 py-3 font-medium text-gray-700 border-b">
                 Date: {group.date}
               </div>
-              <ResultTable result={group.results} />
+              <div className="p-1">
+                <ResultTable result={group.results} />
+              </div>
             </div>
           ))}
         </div>
